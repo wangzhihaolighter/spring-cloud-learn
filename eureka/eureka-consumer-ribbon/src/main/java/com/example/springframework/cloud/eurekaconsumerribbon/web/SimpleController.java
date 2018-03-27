@@ -21,8 +21,7 @@ public class SimpleController {
 
     @GetMapping("/consumer")
     public String consumer() {
-        String url = "http://demo-eureka-client/";
-        return restTemplate.getForObject(url, String.class);
+        return restTemplate.getForObject("http://demo-eureka-client/", String.class);
     }
 
 }
