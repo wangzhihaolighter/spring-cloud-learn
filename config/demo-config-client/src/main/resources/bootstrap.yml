@@ -1,0 +1,13 @@
+#这些属性必须配置在bootstrap.properties中，这样配置服务中的配置信息才能被正确加载server:
+server:
+  port: 9001
+spring:
+  application:
+      name: demo-config-client
+  cloud:
+    config:
+      uri: http://localhost:9000/
+      profile: dev
+      label: master
+
+
