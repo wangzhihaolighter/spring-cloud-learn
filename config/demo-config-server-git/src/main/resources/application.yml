@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: demo-config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wangzhihaolighter/config-repo-demo
+#          需要登录，输入用户名与密码项
+#          username:
+#          password:
+
+#http://${host}:${server.port}/${spring.application.name}/${profile}/${label}
+#查询对应配置文件信息，例:http://localhost:9000/demo-config-client/dev/master
