@@ -6,8 +6,25 @@ spring:
       name: demo-config-client
   cloud:
     config:
-      uri: http://localhost:9000/
+      #uri: http://localhost:9000/
+      discovery:
+        enabled: true
+        service-id: demo-config-server-git
       profile: dev
       label: master
 
+#eureka server
+eureka:
+  server:
+    hostname: localhost
+    port: 8000
+  client:
+    service-url:
+      defaultZone: http://${eureka.server.hostname}:${eureka.server.port}/eureka/
 
+#开启actuator的refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,refresh
