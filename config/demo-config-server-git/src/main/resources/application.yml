@@ -14,3 +14,12 @@ spring:
 
 #http://${host}:${server.port}/${spring.application.name}/${profile}/${label}
 #查询对应配置文件信息，例:http://localhost:9000/demo-config-client/dev/master
+
+#eureka server
+eureka:
+  server:
+    hostname: localhost
+    port: 8000
+  client:
+    service-url:
+      defaultZone: http://${eureka.server.hostname}:${eureka.server.port}/eureka/
