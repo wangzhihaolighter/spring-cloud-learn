@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class SimpleController {
 
@@ -27,17 +29,17 @@ public class SimpleController {
 
     @GetMapping("/consumer")
     public String consumer() {
-        return "demo config datasource client server port:"+serverPort;
+        return "[ server port ] : " + serverPort;
     }
 
     @GetMapping("/consumer/person")
-    public Person consumerPerson() {
-        return personRepository.findById(1L).get();
+    public List<Person> consumerPerson() {
+        return personRepository.findAll();
     }
 
     @GetMapping("/consumer/user")
-    public User consumerUser() {
-        return userRepository.findById(1L).get();
+    public List<User> consumerUser() {
+        return userRepository.findAll();
     }
 
 }

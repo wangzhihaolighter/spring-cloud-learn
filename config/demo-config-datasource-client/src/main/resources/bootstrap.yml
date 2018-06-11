@@ -1,4 +1,5 @@
 #这些属性必须配置在bootstrap.properties中，这样配置服务中的配置信息才能被正确加载server:
+
 ##注册中心配置 - eureka server
 eureka:
   server:
@@ -12,7 +13,7 @@ spring:
   ###应用名
   application:
     name: demo-config-datasource-client
-  ###配置中心配置 - config server
+##配置中心配置 - config server
   cloud:
     config:
       #uri: http://localhost:9000/
@@ -21,23 +22,3 @@ spring:
         service-id: demo-config-server-git
       profile: default
       label: master
-
-#下面是可以放入仓库配置文件中的属性
-##端口
-#server:
-#  port: 9002
-##开启actuator的refresh
-##refresh只刷新加上@RefreshScope注解的properties和bean
-##注意：必须如果要刷新内部或内部类，最顶层的类上也必须加上@RefreshScope注解，不然找不到
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: info,health,refresh
-##数据库配置
-#spring:
-#  datasource:
-#      driver-class-name: com.mysql.jdbc.Driver
-#      url: jdbc:mysql://localhost:3306/spring-cloud-learn?useUnicode=true&characterEncoding=utf-8&useSSL=false
-#      username: root
-#      password: 123456
