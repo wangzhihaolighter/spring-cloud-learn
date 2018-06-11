@@ -10,7 +10,7 @@ spring:
       discovery:
         enabled: true
         service-id: demo-config-server-git
-      profile: dev
+      profile: default
       label: master
 
 #eureka server
