@@ -1,4 +1,5 @@
 # eureka学习
+官方文档：http://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.0.0.RC2/single/spring-cloud-netflix.html
 
 ### eureka入门 - 服务注册与发现
 1. 实现：一个服务注册中心，一个服务消费者
