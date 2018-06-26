@@ -16,6 +16,4 @@ spring-cloud学习整理,版本：springboot2.x 与 spring-cloud Finchley
 
 ### hystrix - 断路器
 
-### config - 配置中心
-
 ### other - 其他
