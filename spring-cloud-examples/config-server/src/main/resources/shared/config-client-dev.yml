@@ -1,0 +1,3 @@
+server:
+  port: 6761
+foo: foo version 1
